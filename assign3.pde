@@ -39,6 +39,21 @@ void setup () {
 }
 
 void draw() {
+   if(start){
+  image(start2,0,0);
+  if((mouseX>206&&mouseX<446)&&(mouseY>306&&mouseY<408)){
+  image(start1,0,0);
+  }
+  }
+  
+  else if(end){
+  image(end2,0,0);
+  if((mouseX>206&&mouseX<446)&&(mouseY>306&&mouseY<408)){
+  image(end1,0,0);
+  }
+  }
+  //game
+  else{
   bg1x+=2;
   bg1x=bg1x%1280;
   image(bg1,bg1x,0);
@@ -160,6 +175,7 @@ void draw() {
   if(hphave<=0)
    end=true; 
 }
+}
 
 
 void mousePressed(){
@@ -176,6 +192,7 @@ void mousePressed(){
    treasureY=floor(random(41,439));
   treasureX=floor(random(41,599));
   }
+
 }
 
 void keyPressed(){
